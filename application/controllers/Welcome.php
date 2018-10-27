@@ -77,10 +77,13 @@ class Welcome extends CI_Controller {
             $pwd = $this->input->post("password");
             $this->load->model("User_model");
             $row = $this->User_model->get_data_by_name($name,$pwd);
-            var_dump($row);
-//            $this->load->view("welcome_message",array(
+//            var_dump($row);
+        //将用户信息存到session里面
+        $this->session->set_userdata('user',$row);
+            $this->load->view("welcome_message",array(
 //                "user"=>$row
-//            ));
+                   "age"=>13
+            ));
     }
 
     }
