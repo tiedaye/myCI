@@ -97,6 +97,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>欢迎:<?php echo $user->name?></h1>
+<!--    <h1>欢迎:--><?php //echo $user->name?><!--</h1>-->
+<?php
+    include "header.php";
+    echo $age
+?>
 </body>
 </html>
